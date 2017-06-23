@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Welcome to the most secure site in the world!</h1>
+    <h1>You are logged in</h1>
+    <h2>Hello, {{user}}</h2>
+    <form class="" action="/counter" method="post">
+      {{#views}}
+      <button type="submit" name="button">You have clicked me {{views}} times</button>
+      {{/views}}
+      {{^views}}
+      <button type="submit" name="button">You have clicked me 0 times</button>
+      {{/views}}
+    </form>
+    <form class="logout" action="/logout" method="post">
+      <button type="submit" name="logout">Log Me Out</button>
+    </form>
+
+  </body>
+</html>
